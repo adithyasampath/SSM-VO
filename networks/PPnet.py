@@ -18,9 +18,12 @@ class PPnet(nn.Module):
             self.model = nn.LSTM(input_size=input_size, hidden_size=hidden_size, num_layers=num_layer, batch_first=batch_first)
         elif self.type == "slstm":
             self.model = nn.LSTM(input_size=input_size, hidden_size=hidden_size, num_layers=num_layer+1, batch_first=batch_first)
-        else:
-            # TODO: Sahiti
-            self.model = nn.Transformer(d_model=512, nhead=8, num_encoder_layers=6, num_decoder_layers=6, dim_feedforward=2048, dropout=0.1)
+        elif self.type == "transformer":
+            encoder_layer = nn.TransformerEncoderLayer(d_model=hidden_size, nhead=8)
+            self.model = nn.TransformerEncoder(encoder_layer, num_layers=num_layer)
+        elif self.type == "stransformer":
+            encoder_layer = nn.TransformerEncoderLayer(d_model=hidden_size, nhead=8)
+            self.model = nn.TransformerEncoder(encoder_layer, num_layers=num_layer+1)
 
         self.fn_mean = nn.Linear(seq * hidden_size, output_size)
         self.fn_variance = nn.Linear(seq * hidden_size, output_size)
