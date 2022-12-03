@@ -61,5 +61,5 @@ class PPNetDataset(Dataset):
         scale_augment = np.random.choice(self.scale)
         input_poses[:,3:] = input_poses[:,3:]*scale_augment
         output_pose[3:] = output_pose[3:]*scale_augment
-        #input_poses = self.center_poses(input_poses)
+        # input_poses = self.center_poses(input_poses)
         return input_poses.to(self.device), output_pose.to(self.device)
