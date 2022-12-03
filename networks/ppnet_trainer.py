@@ -121,7 +121,7 @@ class PPNetTrainer:
                 self.val_loss = self.validate(epoch)
 
             if epoch % self.save_freq == 0:
-                torch.save(self.model, os.path.join(self.save_dir, f'ppnet_{self.model_type}_{self.epoch}.pth'))
+                torch.save(self.model, os.path.join(self.save_dir, f'ppnet_{self.model_type}_{epoch}.pth'))
 
             if not self.val_loss or self.val_loss < self.best_val_loss:
                 torch.save(self.model, os.path.join(self.save_dir, f'ppnet_{self.model_type}_best_model.pth'))

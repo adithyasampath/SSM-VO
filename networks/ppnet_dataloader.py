@@ -55,9 +55,9 @@ class PPNetDataset(Dataset):
     def __getitem__(self, idx):
         input_poses = self.data[idx:idx+20]
         output_pose = self.data[idx + 20]
-        # scale_augment = np.random.choice(self.scale)
-        scale_augment = 1
-        input_poses[:,3:] = input_poses[:,3:]*scale_augment
-        output_pose[3:] = output_pose[3:]*scale_augment
+        scale_augment = np.random.choice(self.scale)
+        #scale_augment = 1
+        input_poses[:,0:3, 3] = input_poses[:,0:3, 3]*scale_augment
+        output_pose[0:3,3] = output_pose[0:3,3]*scale_augment
         # input_poses = self.center_poses(input_poses)
         return input_poses.to(self.device), output_pose.to(self.device)
