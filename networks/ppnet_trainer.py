@@ -16,18 +16,16 @@ class PPNetTrainer:
         # train args
         self.epochs = args.epochs
         self.batch_size = args.batch_size
-        self.num_worker = args.num_worker
-        self.num_samples = args.num_samples
-        self.exp_num = args.exp_num
         self.save_freq = args.save_freq
         self.val_freq = args.val_freq
         self.log_freq = args.log_freq
         self.cuda = torch.cuda.is_available()
         self.device = torch.device("cuda") if self.cuda else torch.device("cpu")
-        self.num_validation_samples = args.num_validation_samples
         self.best_val_acc = 0
-        self.writer = SummaryWriter('./logs')
+        self.writer = SummaryWriter('./ppnet_logs')
         self.save_dir = args.save_dir
+        if not os.path.isdir(self.save_dir):
+            os.makedirs(self.save_dir)
         self.model_type = args.model_type
         self.val_loss = 0
 
