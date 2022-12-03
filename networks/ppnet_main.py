@@ -3,7 +3,7 @@ from ppnet_trainer import PPNetTrainer
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument('--epochs', type=int, default=20)
+    parser.add_argument('--epochs', type=int, default=50)
     parser.add_argument('--batch_size', type=int, default=64)
     parser.add_argument('--val_batch_size', type=int, default=64)
     parser.add_argument('--save_freq', type=int, default=1)
@@ -29,3 +29,8 @@ if __name__ == "__main__":
     trainer = PPNetTrainer(args)
     val_loss = trainer.train()
     print(f"Model validation loss after {args.epochs} epochs: {val_loss}")
+
+# [1] 15107 
+# [2] 15143 
+# [3] 15180 
+# [4] 15217 
