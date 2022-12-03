@@ -1,243 +1,0 @@
-0it [00:00, ?it/s]1it [00:04,  4.03s/it]2it [00:08,  4.04s/it]3it [00:12,  4.09s/it]4it [00:16,  4.06s/it]5it [00:20,  4.05s/it]6it [00:24,  4.04s/it]7it [00:28,  4.04s/it]8it [00:32,  4.03s/it]9it [00:36,  4.03s/it]10it [00:40,  4.03s/it]11it [00:44,  4.03s/it]12it [00:48,  3.89s/it]12it [00:48,  4.00s/it]
-Epoch: 0, Batch: 0/12, Train Loss: 49.04835510253906
-Epoch: 0, Batch: 5/12, Train Loss: 88.78361511230469
-Epoch: 0, Batch: 10/12, Train Loss: 89.84471130371094
-Epoch: 0, Train Loss: 79.50754483540852
-0it [00:00, ?it/s]1it [00:03,  3.46s/it]1it [00:03,  3.46s/it]
-Epoch: 0, Val Loss: 11.752572059631348
-0it [00:00, ?it/s]1it [00:04,  4.04s/it]2it [00:08,  4.04s/it]3it [00:12,  4.04s/it]4it [00:16,  4.04s/it]5it [00:20,  4.04s/it]6it [00:24,  4.04s/it]7it [00:28,  4.03s/it]8it [00:32,  4.03s/it]9it [00:36,  4.03s/it]10it [00:40,  4.03s/it]11it [00:44,  4.03s/it]12it [00:47,  3.90s/it]12it [00:47,  4.00s/it]
-Epoch: 1, Batch: 3/12, Train Loss: 79.78959655761719
-Epoch: 1, Batch: 8/12, Train Loss: 24.163118362426758
-Epoch: 1, Train Loss: 60.18055200576782
-0it [00:00, ?it/s]1it [00:04,  4.04s/it]2it [00:08,  4.04s/it]3it [00:12,  4.04s/it]4it [00:16,  4.04s/it]5it [00:20,  4.04s/it]6it [00:24,  4.03s/it]7it [00:28,  4.03s/it]8it [00:32,  4.03s/it]9it [00:36,  4.03s/it]10it [00:40,  4.03s/it]11it [00:44,  4.03s/it]12it [00:47,  3.90s/it]12it [00:47,  4.00s/it]
-Epoch: 2, Batch: 1/12, Train Loss: 34.457820892333984
-Epoch: 2, Batch: 6/12, Train Loss: 74.68313598632812
-Epoch: 2, Batch: 11/12, Train Loss: 55.96636199951172
-Epoch: 2, Train Loss: 46.267664194107056
-0it [00:00, ?it/s]1it [00:04,  4.03s/it]2it [00:08,  4.03s/it]3it [00:12,  4.03s/it]4it [00:16,  4.03s/it]5it [00:20,  4.03s/it]6it [00:24,  4.03s/it]7it [00:28,  4.03s/it]8it [00:32,  4.03s/it]9it [00:36,  4.03s/it]10it [00:40,  4.03s/it]11it [00:44,  4.03s/it]12it [00:47,  3.89s/it]12it [00:47,  3.99s/it]
-Epoch: 3, Batch: 4/12, Train Loss: 17.034719467163086
-Epoch: 3, Batch: 9/12, Train Loss: 8.316450119018555
-Epoch: 3, Train Loss: 24.848586638768513
-0it [00:00, ?it/s]1it [00:04,  4.03s/it]2it [00:08,  4.03s/it]3it [00:12,  4.03s/it]4it [00:16,  4.03s/it]5it [00:20,  4.03s/it]6it [00:24,  4.03s/it]7it [00:28,  4.03s/it]8it [00:32,  4.03s/it]9it [00:36,  4.02s/it]10it [00:40,  4.02s/it]11it [00:44,  4.03s/it]12it [00:47,  3.89s/it]12it [00:47,  3.99s/it]
-Epoch: 4, Batch: 2/12, Train Loss: 14.197992324829102
-Epoch: 4, Batch: 7/12, Train Loss: 17.976787567138672
-Epoch: 4, Train Loss: 11.781713883082071
-0it [00:00, ?it/s]1it [00:04,  4.04s/it]2it [00:08,  4.03s/it]3it [00:12,  4.03s/it]4it [00:16,  4.03s/it]5it [00:20,  4.03s/it]6it [00:24,  4.03s/it]7it [00:28,  4.03s/it]8it [00:32,  4.03s/it]9it [00:36,  4.03s/it]10it [00:40,  4.03s/it]11it [00:44,  4.03s/it]12it [00:47,  3.89s/it]12it [00:47,  3.99s/it]
-Epoch: 5, Batch: 0/12, Train Loss: 7.956539154052734
-Epoch: 5, Batch: 5/12, Train Loss: 3.202040672302246
-Epoch: 5, Batch: 10/12, Train Loss: 2.9670052528381348
-Epoch: 5, Train Loss: 6.648776094118754
-0it [00:00, ?it/s]1it [00:03,  3.45s/it]1it [00:03,  3.45s/it]
-Epoch: 5, Val Loss: 3.2504658699035645
-0it [00:00, ?it/s]1it [00:04,  4.02s/it]2it [00:08,  4.03s/it]3it [00:12,  4.03s/it]4it [00:16,  4.03s/it]5it [00:20,  4.03s/it]6it [00:24,  4.03s/it]7it [00:28,  4.03s/it]8it [00:32,  4.03s/it]9it [00:36,  4.03s/it]10it [00:40,  4.03s/it]11it [00:44,  4.03s/it]12it [00:47,  3.89s/it]12it [00:47,  3.99s/it]
-Epoch: 6, Batch: 3/12, Train Loss: 8.06214714050293
-Epoch: 6, Batch: 8/12, Train Loss: 2.072531223297119
-Epoch: 6, Train Loss: 5.13866784175237
-0it [00:00, ?it/s]1it [00:04,  4.02s/it]2it [00:08,  4.03s/it]3it [00:12,  4.03s/it]4it [00:16,  4.03s/it]5it [00:20,  4.03s/it]6it [00:24,  4.03s/it]7it [00:28,  4.03s/it]8it [00:32,  4.03s/it]9it [00:36,  4.03s/it]10it [00:40,  4.03s/it]11it [00:44,  4.03s/it]12it [00:47,  3.89s/it]12it [00:47,  3.99s/it]
-Epoch: 7, Batch: 1/12, Train Loss: 2.8584978580474854
-Epoch: 7, Batch: 6/12, Train Loss: 2.1104302406311035
-Epoch: 7, Batch: 11/12, Train Loss: 5.982054233551025
-Epoch: 7, Train Loss: 3.8334839741388955
-0it [00:00, ?it/s]1it [00:04,  4.03s/it]2it [00:08,  4.03s/it]3it [00:12,  4.03s/it]4it [00:16,  4.03s/it]5it [00:20,  4.03s/it]6it [00:24,  4.03s/it]7it [00:28,  4.03s/it]8it [00:32,  4.03s/it]9it [00:36,  4.03s/it]10it [00:40,  4.03s/it]11it [00:44,  4.02s/it]12it [00:47,  3.89s/it]12it [00:47,  3.99s/it]
-Epoch: 8, Batch: 4/12, Train Loss: 2.4086461067199707
-Epoch: 8, Batch: 9/12, Train Loss: 4.266619682312012
-Epoch: 8, Train Loss: 3.398328810930252
-0it [00:00, ?it/s]1it [00:04,  4.02s/it]2it [00:08,  4.02s/it]3it [00:12,  4.03s/it]4it [00:16,  4.03s/it]5it [00:20,  4.03s/it]6it [00:24,  4.03s/it]7it [00:28,  4.03s/it]8it [00:32,  4.03s/it]9it [00:36,  4.03s/it]10it [00:40,  4.02s/it]11it [00:44,  4.03s/it]12it [00:47,  3.89s/it]12it [00:47,  3.99s/it]
-Epoch: 9, Batch: 2/12, Train Loss: 11.310734748840332
-Epoch: 9, Batch: 7/12, Train Loss: 2.757134199142456
-Epoch: 9, Train Loss: 3.8345397810141244
-0it [00:00, ?it/s]1it [00:04,  4.03s/it]2it [00:08,  4.03s/it]3it [00:12,  4.03s/it]4it [00:16,  4.03s/it]5it [00:20,  4.03s/it]6it [00:24,  4.03s/it]7it [00:28,  4.03s/it]8it [00:32,  4.02s/it]9it [00:36,  4.02s/it]10it [00:40,  4.02s/it]11it [00:44,  4.02s/it]12it [00:47,  3.89s/it]12it [00:47,  3.99s/it]
-Epoch: 10, Batch: 0/12, Train Loss: 4.5069122314453125
-Epoch: 10, Batch: 5/12, Train Loss: 1.603310227394104
-Epoch: 10, Batch: 10/12, Train Loss: 3.1788740158081055
-Epoch: 10, Train Loss: 3.7982344726721444
-0it [00:00, ?it/s]1it [00:03,  3.46s/it]1it [00:03,  3.46s/it]
-Epoch: 10, Val Loss: 2.288809061050415
-0it [00:00, ?it/s]1it [00:04,  4.02s/it]2it [00:08,  4.02s/it]3it [00:12,  4.02s/it]4it [00:16,  4.03s/it]5it [00:20,  4.03s/it]6it [00:24,  4.03s/it]7it [00:28,  4.02s/it]8it [00:32,  4.03s/it]9it [00:36,  4.02s/it]10it [00:40,  4.02s/it]11it [00:44,  4.02s/it]12it [00:47,  3.88s/it]12it [00:47,  3.99s/it]
-Epoch: 11, Batch: 3/12, Train Loss: 3.270218849182129
-Epoch: 11, Batch: 8/12, Train Loss: 2.655033588409424
-Epoch: 11, Train Loss: 3.271184037129084
-0it [00:00, ?it/s]1it [00:04,  4.02s/it]2it [00:08,  4.02s/it]3it [00:12,  4.02s/it]4it [00:16,  4.02s/it]5it [00:20,  4.02s/it]6it [00:24,  4.02s/it]7it [00:28,  4.02s/it]8it [00:32,  4.02s/it]9it [00:36,  4.02s/it]10it [00:40,  4.02s/it]11it [00:44,  4.02s/it]12it [00:47,  3.89s/it]12it [00:47,  3.98s/it]
-Epoch: 12, Batch: 1/12, Train Loss: 2.408033609390259
-Epoch: 12, Batch: 6/12, Train Loss: 2.4683635234832764
-Epoch: 12, Batch: 11/12, Train Loss: 2.113859176635742
-Epoch: 12, Train Loss: 3.306622783342997
-0it [00:00, ?it/s]1it [00:04,  4.03s/it]2it [00:08,  4.03s/it]3it [00:12,  4.03s/it]4it [00:16,  4.03s/it]5it [00:20,  4.03s/it]6it [00:24,  4.03s/it]7it [00:28,  4.03s/it]8it [00:32,  4.02s/it]9it [00:36,  4.02s/it]10it [00:40,  4.02s/it]11it [00:44,  4.02s/it]12it [00:47,  3.89s/it]12it [00:47,  3.99s/it]
-Epoch: 13, Batch: 4/12, Train Loss: 2.5325286388397217
-Epoch: 13, Batch: 9/12, Train Loss: 3.1330013275146484
-Epoch: 13, Train Loss: 3.520026703675588
-0it [00:00, ?it/s]1it [00:04,  4.03s/it]2it [00:08,  4.03s/it]3it [00:12,  4.04s/it]4it [00:16,  4.04s/it]5it [00:20,  4.03s/it]6it [00:24,  4.03s/it]7it [00:28,  4.02s/it]8it [00:32,  4.02s/it]9it [00:36,  4.02s/it]10it [00:40,  4.02s/it]11it [00:44,  4.02s/it]12it [00:47,  3.89s/it]12it [00:47,  3.99s/it]
-Epoch: 14, Batch: 2/12, Train Loss: 5.377928733825684
-Epoch: 14, Batch: 7/12, Train Loss: 3.2697129249572754
-Epoch: 14, Train Loss: 3.017129123210907
-0it [00:00, ?it/s]1it [00:04,  4.03s/it]2it [00:08,  4.02s/it]3it [00:12,  4.02s/it]4it [00:16,  4.02s/it]5it [00:20,  4.03s/it]6it [00:24,  4.03s/it]7it [00:28,  4.03s/it]8it [00:32,  4.03s/it]9it [00:36,  4.03s/it]10it [00:40,  4.02s/it]11it [00:44,  4.02s/it]12it [00:47,  3.89s/it]12it [00:47,  3.99s/it]
-Epoch: 15, Batch: 0/12, Train Loss: 3.4847569465637207
-Epoch: 15, Batch: 5/12, Train Loss: 1.9386719465255737
-Epoch: 15, Batch: 10/12, Train Loss: 2.416433811187744
-Epoch: 15, Train Loss: 2.7163724402586618
-0it [00:00, ?it/s]1it [00:03,  3.45s/it]1it [00:03,  3.45s/it]
-Epoch: 15, Val Loss: 2.538398265838623
-0it [00:00, ?it/s]1it [00:04,  4.03s/it]2it [00:08,  4.03s/it]3it [00:12,  4.01s/it]4it [00:16,  4.01s/it]5it [00:20,  4.00s/it]6it [00:24,  3.99s/it]7it [00:27,  3.99s/it]8it [00:31,  3.99s/it]9it [00:35,  3.99s/it]10it [00:39,  3.98s/it]11it [00:43,  3.99s/it]12it [00:47,  3.85s/it]12it [00:47,  3.96s/it]
-Epoch: 16, Batch: 3/12, Train Loss: 3.0271360874176025
-Epoch: 16, Batch: 8/12, Train Loss: 1.9894964694976807
-Epoch: 16, Train Loss: 2.4928484857082367
-0it [00:00, ?it/s]1it [00:03,  3.99s/it]2it [00:07,  3.98s/it]3it [00:11,  3.99s/it]4it [00:15,  3.99s/it]5it [00:19,  3.99s/it]6it [00:23,  3.99s/it]7it [00:27,  3.99s/it]8it [00:31,  3.99s/it]9it [00:35,  3.99s/it]10it [00:39,  3.98s/it]11it [00:43,  3.98s/it]12it [00:47,  3.85s/it]12it [00:47,  3.95s/it]
-Epoch: 17, Batch: 1/12, Train Loss: 1.919997215270996
-Epoch: 17, Batch: 6/12, Train Loss: 2.2275943756103516
-Epoch: 17, Batch: 11/12, Train Loss: 1.9832345247268677
-Epoch: 17, Train Loss: 2.738355348507563
-0it [00:00, ?it/s]1it [00:03,  3.98s/it]2it [00:07,  3.99s/it]3it [00:11,  3.99s/it]4it [00:15,  3.99s/it]5it [00:19,  3.99s/it]6it [00:23,  3.99s/it]7it [00:27,  3.99s/it]8it [00:31,  3.99s/it]9it [00:35,  3.99s/it]10it [00:39,  3.99s/it]11it [00:43,  3.99s/it]12it [00:47,  3.85s/it]12it [00:47,  3.95s/it]
-Epoch: 18, Batch: 4/12, Train Loss: 2.1249377727508545
-Epoch: 18, Batch: 9/12, Train Loss: 1.8841817378997803
-Epoch: 18, Train Loss: 2.6317382951577506
-0it [00:00, ?it/s]1it [00:03,  3.98s/it]2it [00:07,  3.99s/it]3it [00:11,  3.99s/it]4it [00:15,  3.99s/it]5it [00:19,  3.99s/it]6it [00:23,  3.99s/it]7it [00:27,  3.99s/it]8it [00:31,  3.99s/it]9it [00:35,  3.99s/it]10it [00:39,  3.98s/it]11it [00:43,  3.98s/it]12it [00:47,  3.85s/it]12it [00:47,  3.95s/it]
-Epoch: 19, Batch: 2/12, Train Loss: 5.138469696044922
-Epoch: 19, Batch: 7/12, Train Loss: 2.9230477809906006
-Epoch: 19, Train Loss: 2.5407980382442474
-0it [00:00, ?it/s]1it [00:03,  3.99s/it]2it [00:07,  3.99s/it]3it [00:11,  3.99s/it]4it [00:15,  3.99s/it]5it [00:19,  3.98s/it]6it [00:23,  3.98s/it]7it [00:27,  3.98s/it]8it [00:31,  3.98s/it]9it [00:35,  3.98s/it]10it [00:39,  3.98s/it]11it [00:43,  3.98s/it]12it [00:47,  3.85s/it]12it [00:47,  3.95s/it]
-Epoch: 20, Batch: 0/12, Train Loss: 2.5106232166290283
-Epoch: 20, Batch: 5/12, Train Loss: 1.9172518253326416
-Epoch: 20, Batch: 10/12, Train Loss: 1.971656322479248
-Epoch: 20, Train Loss: 2.528051515420278
-0it [00:00, ?it/s]1it [00:03,  3.43s/it]1it [00:03,  3.43s/it]
-Epoch: 20, Val Loss: 2.3652846813201904
-0it [00:00, ?it/s]1it [00:03,  3.99s/it]2it [00:07,  3.99s/it]3it [00:11,  3.99s/it]4it [00:15,  3.99s/it]5it [00:19,  3.99s/it]6it [00:23,  3.99s/it]7it [00:28,  4.02s/it]8it [00:32,  4.01s/it]9it [00:36,  4.01s/it]10it [00:40,  4.00s/it]11it [00:43,  4.00s/it]12it [00:47,  3.86s/it]12it [00:47,  3.96s/it]
-Epoch: 21, Batch: 3/12, Train Loss: 2.69866943359375
-Epoch: 21, Batch: 8/12, Train Loss: 2.0721333026885986
-Epoch: 21, Train Loss: 2.324359824260076
-0it [00:00, ?it/s]1it [00:03,  3.99s/it]2it [00:07,  3.99s/it]3it [00:11,  3.99s/it]4it [00:15,  3.99s/it]5it [00:19,  3.99s/it]6it [00:23,  3.99s/it]7it [00:27,  3.99s/it]8it [00:31,  3.99s/it]9it [00:35,  3.99s/it]10it [00:39,  3.99s/it]11it [00:43,  3.99s/it]12it [00:47,  3.85s/it]12it [00:47,  3.95s/it]
-Epoch: 22, Batch: 1/12, Train Loss: 1.7856390476226807
-Epoch: 22, Batch: 6/12, Train Loss: 2.4218783378601074
-Epoch: 22, Batch: 11/12, Train Loss: 1.6806796789169312
-Epoch: 22, Train Loss: 2.143018772204717
-0it [00:00, ?it/s]1it [00:03,  3.99s/it]2it [00:07,  3.99s/it]3it [00:11,  3.99s/it]4it [00:15,  3.99s/it]5it [00:19,  3.99s/it]6it [00:23,  3.99s/it]7it [00:27,  3.99s/it]8it [00:31,  3.99s/it]9it [00:35,  3.99s/it]10it [00:39,  3.99s/it]11it [00:43,  3.99s/it]12it [00:47,  3.85s/it]12it [00:47,  3.95s/it]
-Epoch: 23, Batch: 4/12, Train Loss: 2.123232364654541
-Epoch: 23, Batch: 9/12, Train Loss: 1.7140743732452393
-Epoch: 23, Train Loss: 2.2955557703971863
-0it [00:00, ?it/s]1it [00:03,  3.98s/it]2it [00:07,  3.99s/it]3it [00:11,  3.99s/it]4it [00:15,  3.99s/it]5it [00:19,  3.99s/it]6it [00:23,  3.99s/it]7it [00:27,  3.99s/it]8it [00:31,  3.99s/it]9it [00:35,  3.99s/it]10it [00:39,  3.99s/it]11it [00:43,  3.99s/it]12it [00:47,  3.86s/it]12it [00:47,  3.95s/it]
-Epoch: 24, Batch: 2/12, Train Loss: 6.706776142120361
-Epoch: 24, Batch: 7/12, Train Loss: 3.0036234855651855
-Epoch: 24, Train Loss: 2.43817667166392
-0it [00:00, ?it/s]1it [00:03,  3.99s/it]2it [00:07,  3.99s/it]3it [00:11,  3.99s/it]4it [00:15,  3.99s/it]5it [00:19,  3.99s/it]6it [00:23,  3.99s/it]7it [00:27,  3.99s/it]8it [00:31,  3.99s/it]9it [00:35,  3.99s/it]10it [00:39,  3.99s/it]11it [00:43,  3.99s/it]12it [00:47,  3.85s/it]12it [00:47,  3.95s/it]
-Epoch: 25, Batch: 0/12, Train Loss: 1.9085402488708496
-Epoch: 25, Batch: 5/12, Train Loss: 2.0007781982421875
-Epoch: 25, Batch: 10/12, Train Loss: 1.7905409336090088
-Epoch: 25, Train Loss: 2.4142731527487435
-0it [00:00, ?it/s]1it [00:03,  3.45s/it]1it [00:03,  3.45s/it]
-Epoch: 25, Val Loss: 2.322593927383423
-0it [00:00, ?it/s]1it [00:03,  3.99s/it]2it [00:07,  3.99s/it]3it [00:11,  3.99s/it]4it [00:15,  3.99s/it]5it [00:19,  3.99s/it]6it [00:23,  3.99s/it]7it [00:27,  3.99s/it]8it [00:31,  3.99s/it]9it [00:35,  3.99s/it]10it [00:39,  3.99s/it]11it [00:43,  3.99s/it]12it [00:47,  3.85s/it]12it [00:47,  3.95s/it]
-Epoch: 26, Batch: 3/12, Train Loss: 3.5825791358947754
-Epoch: 26, Batch: 8/12, Train Loss: 1.8514657020568848
-Epoch: 26, Train Loss: 2.565421005090078
-0it [00:00, ?it/s]1it [00:03,  3.99s/it]2it [00:07,  3.99s/it]3it [00:11,  3.99s/it]4it [00:15,  3.99s/it]5it [00:19,  3.99s/it]6it [00:23,  3.99s/it]7it [00:27,  3.99s/it]8it [00:31,  3.99s/it]9it [00:35,  3.99s/it]10it [00:39,  3.98s/it]11it [00:43,  3.99s/it]12it [00:47,  3.85s/it]12it [00:47,  3.95s/it]
-Epoch: 27, Batch: 1/12, Train Loss: 1.6660315990447998
-Epoch: 27, Batch: 6/12, Train Loss: 2.0615668296813965
-Epoch: 27, Batch: 11/12, Train Loss: 1.6836713552474976
-Epoch: 27, Train Loss: 2.5214073260625205
-0it [00:00, ?it/s]1it [00:03,  3.99s/it]2it [00:07,  3.99s/it]3it [00:11,  3.99s/it]4it [00:15,  3.99s/it]5it [00:19,  3.99s/it]6it [00:23,  3.99s/it]7it [00:27,  3.99s/it]8it [00:31,  3.99s/it]9it [00:35,  3.99s/it]10it [00:39,  3.99s/it]11it [00:43,  3.99s/it]12it [00:47,  3.85s/it]12it [00:47,  3.95s/it]
-Epoch: 28, Batch: 4/12, Train Loss: 2.071540594100952
-Epoch: 28, Batch: 9/12, Train Loss: 1.5791455507278442
-Epoch: 28, Train Loss: 2.3881809413433075
-0it [00:00, ?it/s]1it [00:03,  3.99s/it]2it [00:07,  3.99s/it]3it [00:11,  3.99s/it]4it [00:15,  3.99s/it]5it [00:19,  3.99s/it]6it [00:23,  3.99s/it]7it [00:27,  4.00s/it]8it [00:32,  4.03s/it]9it [00:36,  4.05s/it]10it [00:40,  4.04s/it]11it [00:44,  4.04s/it]12it [00:47,  3.91s/it]12it [00:47,  3.98s/it]
-Epoch: 29, Batch: 2/12, Train Loss: 8.084417343139648
-Epoch: 29, Batch: 7/12, Train Loss: 2.932769775390625
-Epoch: 29, Train Loss: 2.5288882851600647
-0it [00:00, ?it/s]1it [00:04,  4.04s/it]2it [00:08,  4.04s/it]3it [00:12,  4.04s/it]4it [00:16,  4.03s/it]5it [00:20,  4.03s/it]6it [00:24,  4.05s/it]7it [00:28,  4.04s/it]8it [00:32,  4.04s/it]9it [00:36,  4.04s/it]10it [00:40,  4.04s/it]11it [00:44,  4.04s/it]12it [00:48,  3.90s/it]12it [00:48,  4.00s/it]
-Epoch: 30, Batch: 0/12, Train Loss: 1.805708408355713
-Epoch: 30, Batch: 5/12, Train Loss: 1.73409104347229
-Epoch: 30, Batch: 10/12, Train Loss: 1.7403926849365234
-Epoch: 30, Train Loss: 2.7377867996692657
-0it [00:00, ?it/s]1it [00:03,  3.47s/it]1it [00:03,  3.47s/it]
-Epoch: 30, Val Loss: 2.233497381210327
-0it [00:00, ?it/s]1it [00:04,  4.04s/it]2it [00:08,  4.04s/it]3it [00:12,  4.04s/it]4it [00:16,  4.04s/it]5it [00:20,  4.04s/it]6it [00:24,  4.04s/it]7it [00:28,  4.04s/it]8it [00:32,  4.04s/it]9it [00:36,  4.04s/it]10it [00:40,  4.04s/it]11it [00:44,  4.04s/it]12it [00:48,  3.90s/it]12it [00:48,  4.00s/it]
-Epoch: 31, Batch: 3/12, Train Loss: 2.444352626800537
-Epoch: 31, Batch: 8/12, Train Loss: 1.6900219917297363
-Epoch: 31, Train Loss: 2.206779052813848
-0it [00:00, ?it/s]1it [00:04,  4.04s/it]2it [00:08,  4.04s/it]3it [00:12,  4.03s/it]4it [00:16,  4.04s/it]5it [00:20,  4.04s/it]6it [00:24,  4.04s/it]7it [00:28,  4.04s/it]8it [00:32,  4.04s/it]9it [00:36,  4.04s/it]10it [00:40,  4.03s/it]11it [00:44,  4.04s/it]12it [00:48,  3.90s/it]12it [00:48,  4.00s/it]
-Epoch: 32, Batch: 1/12, Train Loss: 1.6360933780670166
-Epoch: 32, Batch: 6/12, Train Loss: 2.03537917137146
-Epoch: 32, Batch: 11/12, Train Loss: 1.4302735328674316
-Epoch: 32, Train Loss: 2.0681270956993103
-0it [00:00, ?it/s]1it [00:04,  4.05s/it]2it [00:08,  4.04s/it]3it [00:12,  4.04s/it]4it [00:16,  4.04s/it]5it [00:20,  4.04s/it]6it [00:24,  4.04s/it]7it [00:28,  4.04s/it]8it [00:32,  4.06s/it]9it [00:36,  4.06s/it]10it [00:40,  4.04s/it]11it [00:44,  4.03s/it]12it [00:47,  3.89s/it]12it [00:47,  4.00s/it]
-Epoch: 33, Batch: 4/12, Train Loss: 2.2051987648010254
-Epoch: 33, Batch: 9/12, Train Loss: 1.6035101413726807
-Epoch: 33, Train Loss: 2.0915198226769767
-0it [00:00, ?it/s]1it [00:04,  4.02s/it]2it [00:08,  4.02s/it]3it [00:12,  4.02s/it]4it [00:16,  4.01s/it]5it [00:20,  4.01s/it]6it [00:24,  4.01s/it]7it [00:28,  4.01s/it]8it [00:32,  4.01s/it]9it [00:36,  4.01s/it]10it [00:40,  4.00s/it]11it [00:44,  4.00s/it]12it [00:47,  3.87s/it]12it [00:47,  3.97s/it]
-Epoch: 34, Batch: 2/12, Train Loss: 8.535074234008789
-Epoch: 34, Batch: 7/12, Train Loss: 2.961215019226074
-Epoch: 34, Train Loss: 2.3906375964482627
-0it [00:00, ?it/s]1it [00:03,  4.00s/it]2it [00:08,  4.00s/it]3it [00:12,  4.00s/it]4it [00:16,  4.00s/it]5it [00:20,  4.01s/it]6it [00:24,  4.01s/it]7it [00:28,  4.01s/it]8it [00:32,  4.01s/it]9it [00:36,  4.02s/it]10it [00:40,  4.04s/it]11it [00:44,  4.04s/it]12it [00:47,  3.89s/it]12it [00:47,  3.98s/it]
-Epoch: 35, Batch: 0/12, Train Loss: 1.4605381488800049
-Epoch: 35, Batch: 5/12, Train Loss: 1.6312592029571533
-Epoch: 35, Batch: 10/12, Train Loss: 1.6249237060546875
-Epoch: 35, Train Loss: 2.1362378299236298
-0it [00:00, ?it/s]1it [00:03,  3.43s/it]1it [00:03,  3.43s/it]
-Epoch: 35, Val Loss: 2.0274415016174316
-0it [00:00, ?it/s]1it [00:03,  3.99s/it]2it [00:07,  4.00s/it]3it [00:11,  4.00s/it]4it [00:16,  4.01s/it]5it [00:20,  4.01s/it]6it [00:24,  4.01s/it]7it [00:28,  4.02s/it]8it [00:32,  4.02s/it]9it [00:36,  4.03s/it]10it [00:40,  4.03s/it]11it [00:44,  4.03s/it]12it [00:47,  3.90s/it]12it [00:47,  3.98s/it]
-Epoch: 36, Batch: 3/12, Train Loss: 2.2684011459350586
-Epoch: 36, Batch: 8/12, Train Loss: 1.4771066904067993
-Epoch: 36, Train Loss: 2.0047640999158225
-0it [00:00, ?it/s]1it [00:04,  4.04s/it]2it [00:08,  4.04s/it]3it [00:12,  4.03s/it]4it [00:16,  4.03s/it]5it [00:20,  4.03s/it]6it [00:24,  4.03s/it]7it [00:28,  4.04s/it]8it [00:32,  4.04s/it]9it [00:36,  4.07s/it]10it [00:40,  4.08s/it]11it [00:44,  4.09s/it]12it [00:48,  3.96s/it]12it [00:48,  4.03s/it]
-Epoch: 37, Batch: 1/12, Train Loss: 1.3292218446731567
-Epoch: 37, Batch: 6/12, Train Loss: 1.954314947128296
-Epoch: 37, Batch: 11/12, Train Loss: 1.2810075283050537
-Epoch: 37, Train Loss: 2.062136967976888
-0it [00:00, ?it/s]1it [00:04,  4.03s/it]2it [00:08,  4.08s/it]3it [00:12,  4.06s/it]4it [00:16,  4.05s/it]5it [00:20,  4.04s/it]6it [00:24,  4.04s/it]7it [00:28,  4.03s/it]8it [00:32,  4.03s/it]9it [00:36,  4.03s/it]10it [00:40,  4.02s/it]11it [00:44,  4.03s/it]12it [00:47,  3.89s/it]12it [00:47,  4.00s/it]
-Epoch: 38, Batch: 4/12, Train Loss: 1.8738021850585938
-Epoch: 38, Batch: 9/12, Train Loss: 1.4796884059906006
-Epoch: 38, Train Loss: 2.025202294190725
-0it [00:00, ?it/s]1it [00:04,  4.02s/it]2it [00:08,  4.03s/it]3it [00:12,  4.02s/it]4it [00:16,  4.03s/it]5it [00:20,  4.04s/it]6it [00:24,  4.07s/it]7it [00:28,  4.08s/it]8it [00:32,  4.10s/it]9it [00:36,  4.08s/it]10it [00:40,  4.06s/it]11it [00:44,  4.05s/it]12it [00:48,  3.91s/it]12it [00:48,  4.02s/it]
-Epoch: 39, Batch: 2/12, Train Loss: 3.3246986865997314
-Epoch: 39, Batch: 7/12, Train Loss: 5.054842948913574
-Epoch: 39, Train Loss: 2.0047101080417633
-0it [00:00, ?it/s]1it [00:04,  4.03s/it]2it [00:08,  4.03s/it]3it [00:12,  4.03s/it]4it [00:16,  4.07s/it]5it [00:20,  4.05s/it]6it [00:24,  4.04s/it]7it [00:28,  4.04s/it]8it [00:32,  4.04s/it]9it [00:36,  4.04s/it]10it [00:40,  4.04s/it]11it [00:44,  4.03s/it]12it [00:48,  3.90s/it]12it [00:48,  4.00s/it]
-Epoch: 40, Batch: 0/12, Train Loss: 1.2819185256958008
-Epoch: 40, Batch: 5/12, Train Loss: 1.5377579927444458
-Epoch: 40, Batch: 10/12, Train Loss: 1.5403480529785156
-Epoch: 40, Train Loss: 1.982863297065099
-0it [00:00, ?it/s]1it [00:03,  3.47s/it]1it [00:03,  3.47s/it]
-Epoch: 40, Val Loss: 1.9537917375564575
-0it [00:00, ?it/s]1it [00:04,  4.04s/it]2it [00:08,  4.04s/it]3it [00:12,  4.04s/it]4it [00:16,  4.03s/it]5it [00:20,  4.03s/it]6it [00:24,  4.03s/it]7it [00:28,  4.03s/it]8it [00:32,  4.03s/it]9it [00:36,  4.03s/it]10it [00:40,  4.02s/it]11it [00:44,  4.01s/it]12it [00:47,  3.87s/it]12it [00:47,  3.99s/it]
-Epoch: 41, Batch: 3/12, Train Loss: 1.7605092525482178
-Epoch: 41, Batch: 8/12, Train Loss: 1.3497469425201416
-Epoch: 41, Train Loss: 2.2647040088971457
-0it [00:00, ?it/s]1it [00:03,  4.00s/it]2it [00:07,  3.99s/it]3it [00:11,  4.00s/it]4it [00:15,  4.00s/it]5it [00:19,  3.99s/it]6it [00:23,  4.00s/it]7it [00:27,  4.00s/it]8it [00:31,  4.00s/it]9it [00:35,  3.99s/it]10it [00:39,  3.99s/it]11it [00:43,  3.99s/it]12it [00:47,  3.86s/it]12it [00:47,  3.96s/it]
-Epoch: 42, Batch: 1/12, Train Loss: 1.2963006496429443
-Epoch: 42, Batch: 6/12, Train Loss: 1.9648184776306152
-Epoch: 42, Batch: 11/12, Train Loss: 1.3969132900238037
-Epoch: 42, Train Loss: 2.3558537860711417
-0it [00:00, ?it/s]1it [00:03,  3.99s/it]2it [00:07,  3.99s/it]3it [00:11,  4.00s/it]4it [00:15,  4.00s/it]5it [00:19,  3.99s/it]6it [00:23,  4.00s/it]7it [00:27,  4.00s/it]8it [00:31,  4.00s/it]9it [00:35,  3.99s/it]10it [00:39,  3.99s/it]11it [00:43,  3.99s/it]12it [00:47,  3.86s/it]12it [00:47,  3.96s/it]
-Epoch: 43, Batch: 4/12, Train Loss: 1.9040353298187256
-Epoch: 43, Batch: 9/12, Train Loss: 1.745295763015747
-Epoch: 43, Train Loss: 2.698905815680822
-0it [00:00, ?it/s]1it [00:03,  4.00s/it]2it [00:07,  3.99s/it]3it [00:11,  3.99s/it]4it [00:15,  3.99s/it]5it [00:19,  3.99s/it]6it [00:23,  4.00s/it]7it [00:27,  3.99s/it]8it [00:31,  3.99s/it]9it [00:35,  3.99s/it]10it [00:39,  3.99s/it]11it [00:43,  3.99s/it]12it [00:47,  3.86s/it]12it [00:47,  3.96s/it]
-Epoch: 44, Batch: 2/12, Train Loss: 7.634430885314941
-Epoch: 44, Batch: 7/12, Train Loss: 3.892848491668701
-Epoch: 44, Train Loss: 2.4310103555520377
-0it [00:00, ?it/s]1it [00:03,  3.99s/it]2it [00:07,  4.00s/it]3it [00:11,  4.00s/it]4it [00:15,  3.99s/it]5it [00:19,  3.99s/it]6it [00:23,  3.99s/it]7it [00:27,  3.99s/it]8it [00:31,  4.00s/it]9it [00:35,  3.99s/it]10it [00:39,  3.99s/it]11it [00:43,  4.00s/it]12it [00:47,  3.86s/it]12it [00:47,  3.96s/it]
-Epoch: 45, Batch: 0/12, Train Loss: 1.7106825113296509
-Epoch: 45, Batch: 5/12, Train Loss: 1.7615898847579956
-Epoch: 45, Batch: 10/12, Train Loss: 1.7190876007080078
-Epoch: 45, Train Loss: 2.4938667317231498
-0it [00:00, ?it/s]1it [00:03,  3.42s/it]1it [00:03,  3.42s/it]
-Epoch: 45, Val Loss: 2.1800718307495117
-0it [00:00, ?it/s]1it [00:03,  3.99s/it]2it [00:07,  4.00s/it]3it [00:11,  3.99s/it]4it [00:15,  4.00s/it]5it [00:19,  4.00s/it]6it [00:23,  4.00s/it]7it [00:27,  4.00s/it]8it [00:31,  4.00s/it]9it [00:35,  3.99s/it]10it [00:39,  3.99s/it]11it [00:43,  3.99s/it]12it [00:47,  3.86s/it]12it [00:47,  3.96s/it]
-Epoch: 46, Batch: 3/12, Train Loss: 1.9351332187652588
-Epoch: 46, Batch: 8/12, Train Loss: 1.5317063331604004
-Epoch: 46, Train Loss: 2.536241908868154
-0it [00:00, ?it/s]1it [00:03,  3.99s/it]2it [00:07,  3.99s/it]3it [00:11,  3.99s/it]4it [00:15,  3.99s/it]5it [00:19,  3.99s/it]6it [00:23,  3.99s/it]7it [00:27,  3.99s/it]8it [00:31,  3.99s/it]9it [00:35,  3.99s/it]10it [00:39,  3.98s/it]11it [00:43,  3.99s/it]12it [00:47,  3.85s/it]12it [00:47,  3.95s/it]
-Epoch: 47, Batch: 1/12, Train Loss: 1.4026402235031128
-Epoch: 47, Batch: 6/12, Train Loss: 1.9625202417373657
-Epoch: 47, Batch: 11/12, Train Loss: 1.4277135133743286
-Epoch: 47, Train Loss: 2.5288593073685965
-0it [00:00, ?it/s]1it [00:03,  3.99s/it]2it [00:07,  4.00s/it]3it [00:11,  3.99s/it]4it [00:15,  4.00s/it]5it [00:19,  3.99s/it]6it [00:23,  3.99s/it]7it [00:27,  3.99s/it]8it [00:31,  3.99s/it]9it [00:35,  3.99s/it]10it [00:39,  3.99s/it]11it [00:43,  3.99s/it]12it [00:47,  3.86s/it]12it [00:47,  3.96s/it]
-Epoch: 48, Batch: 4/12, Train Loss: 1.9096662998199463
-Epoch: 48, Batch: 9/12, Train Loss: 1.9537811279296875
-Epoch: 48, Train Loss: 1.9734474122524261
-0it [00:00, ?it/s]1it [00:03,  3.99s/it]2it [00:07,  3.99s/it]3it [00:11,  3.99s/it]4it [00:15,  3.99s/it]5it [00:19,  3.99s/it]6it [00:23,  3.99s/it]7it [00:27,  3.99s/it]8it [00:31,  4.00s/it]9it [00:35,  3.99s/it]10it [00:39,  3.99s/it]11it [00:43,  3.99s/it]12it [00:47,  3.86s/it]12it [00:47,  3.96s/it]
-Epoch: 49, Batch: 2/12, Train Loss: 5.269947052001953
-Epoch: 49, Batch: 7/12, Train Loss: 3.0317535400390625
-Epoch: 49, Train Loss: 2.067416548728943
-0it [00:00, ?it/s]1it [00:03,  3.43s/it]1it [00:03,  3.44s/it]
-Epoch: 49, Val Loss: 1.955415964126587
-Model validation loss after 50 epochs: 1.955415964126587
