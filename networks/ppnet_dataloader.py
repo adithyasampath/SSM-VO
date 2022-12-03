@@ -21,11 +21,8 @@ class PPNetDataset(Dataset):
             for lines in f:
                 p_data = lines.strip().split(" ")
                 p_data = [float(x) for x in p_data]
-                t_data = torch.Tensor(p_data[3::4])
-                del p_data[3::4]
-                c_data = torch.Tensor(p_data).reshape((1,3,3))
-                angle= matrix_to_axis_angle(c_data).reshape((-1))
-                pose = torch.hstack((angle , t_data))
+                p_data = torch.Tensor(p_data).reshape((3,4))
+                pose = torch.vstack((p_data , torch.Tensor([[0, 0, 0, 1]])))
                 data.append(pose)
         return torch.stack(data)
 

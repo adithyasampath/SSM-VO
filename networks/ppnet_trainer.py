@@ -67,13 +67,14 @@ class PPNetTrainer:
         N = input_poses.shape[1] 
         rel_poses = [] #b,20,6
         for i in range(1, N):
-            rel_pose = self.utils.ses2SEs(input_poses[:,i]).inverse() @ self.utils.ses2SEs(input_poses[:,i-1])
+            rel_pose = input_poses[:,i].inverse() @ input_poses[:,i-1]
             rel_poses.append(rel_pose)
 
         rel_poses = torch.stack(rel_poses, dim=1) # bx19x4x4
         rel_poses = self.utils.SEs2ses(rel_poses.reshape(-1, 4, 4)).reshape(b, -1, 6)
         centered_poses = self.utils.translate_poses(rel_poses)
         return centered_poses
+    
 
     def train(self):
         # get number of train batches
@@ -96,6 +97,7 @@ class PPNetTrainer:
                 
                 # apply utils here
                 X = self.center_poses(X)
+                target = self.utils.SEs2ses(target)
 
                 # model forward
                 mean, log_variance = self.model(X)
@@ -144,7 +146,8 @@ class PPNetTrainer:
 
             # apply utils here
             X = self.center_poses(X)
-
+            target = self.utils.SEs2ses(target)
+            
             # model forward
             mean, log_variance = self.model(X)
 
