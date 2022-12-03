@@ -11,7 +11,7 @@ class PPNetDataset(Dataset):
     def __init__(self, poses_file="", device = 'cpu'):
         self.poses_file = poses_file
         self.data = self.read_file()
-        self.scale = torch.arange(1, 5)
+        self.scale = torch.linspace(1, 1.5, steps=5)
         self.device = device
     
     def read_file(self):
