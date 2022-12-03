@@ -24,7 +24,7 @@ class PPNetTrainer:
         self.log_freq = args.log_freq
         self.cuda = torch.cuda.is_available()
         self.device = torch.device("cuda") if self.cuda else torch.device("cpu")
-        self.best_val_acc = 0
+        self.best_val_loss = float('inf')
         self.writer = SummaryWriter('./ppnet_logs')
         self.save_dir = args.save_dir
         if not os.path.isdir(self.save_dir):
@@ -121,10 +121,11 @@ class PPNetTrainer:
                 self.val_loss = self.validate(epoch)
 
             if epoch % self.save_freq:
-                if not self.val_loss or self.val_loss > self.best_val_acc:
-                    torch.save(self.model, os.path.join(self.save_dir, f'ppnet_{self.model_type}_best_model.pth'))
                 torch.save(self.model, os.path.join(self.save_dir, f'ppnet_{self.model_type}_{self.epoch}.pth'))
-        
+
+            if not self.val_loss or self.val_loss < self.best_val_loss:
+                torch.save(self.model, os.path.join(self.save_dir, f'ppnet_{self.model_type}_best_model.pth'))
+
         final_val_loss = self.validate(epoch)
         return final_val_loss
 
