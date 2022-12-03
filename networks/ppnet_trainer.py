@@ -8,6 +8,7 @@ import math
 from torch.utils.tensorboard import SummaryWriter
 from ppnet_loss import MotionLoss
 from PPnet import PPnet
+from ppnet_utils import PPNetUtils
 
 class PPNetTrainer:
     def __init__(self, args):
@@ -32,6 +33,9 @@ class PPNetTrainer:
         self.model = PPnet(args.input_size, args.output_size, args.seq, args.hidden_size, args.num_layer, args.batch_first, args.model_type)
         if self.cuda:
             self.model = self.model.cuda()
+        
+        # utils
+        self.utils = PPNetUtils(self.device)
 
         # data loaders
         self.data_dir = args.data_dir
@@ -73,6 +77,8 @@ class PPNetTrainer:
 
                 # get batch data
                 X, target = batch_data
+                
+                # TODO: apply utils here
 
                 # model forward
                 mean, log_variance = self.model(X)
@@ -118,6 +124,8 @@ class PPNetTrainer:
             
             # get batch data
             X, target = batch_data
+
+            # TODO: apply utils here
 
             # model forward
             mean, log_variance = self.model(X)
