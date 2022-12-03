@@ -43,7 +43,7 @@ class PPNetTrainer:
         # data loaders
         self.data_dir = args.data_dir
         self.split = args.split
-        files = [os.path.join(self.data_dir, "{:02d}.txt".format(idx)) for idx in range(1, 9)]
+        files = [os.path.join(self.data_dir, "{:02d}.txt".format(idx)) for idx in range(0, 9)]
         loaders = [PPNetDataset(file_path, self.device) for file_path in files]
         len_loader = len(loaders)
         assert sum(self.split)==1, "Incorrect train, val, test split ratio"
