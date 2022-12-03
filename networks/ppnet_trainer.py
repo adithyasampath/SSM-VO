@@ -1,8 +1,8 @@
 import torch
 import numpy as np
 import os
-from ppnet_loss import PPNetLoss
-from torch.utils.data import ConcatDataset
+from tqdm import tqdm
+from torch.utils.data import ConcatDataset, DataLoader
 from ppnet_dataloader import PPNetDataset
 import math
 from torch.utils.tensorboard import SummaryWriter
@@ -11,11 +11,10 @@ from PPnet import PPnet
 
 class PPNetTrainer:
     def __init__(self, args):
-        # data_dir="/home/aditya/SSM-VO/dataset/poses", split=[0.8,0.1,0.1], batch_size=32, epochs=20, num_worker=5, num_samples=100, exp_num=0
-
         # train args
         self.epochs = args.epochs
         self.batch_size = args.batch_size
+        self.val_batch_size = args.val_batch_size
         self.save_freq = args.save_freq
         self.val_freq = args.val_freq
         self.log_freq = args.log_freq
@@ -30,8 +29,7 @@ class PPNetTrainer:
         self.val_loss = 0
 
         # model
-        # input_size=6, output_size=6, seq=20, hidden_size=8, num_layer=1, batch_first=True, model_type="lstm"
-        self.model = PPnet(args.input_size, args.output_size, args.hidden_size, args.num_layer, args.batch_first, args.model_type)
+        self.model = PPnet(args.input_size, args.output_size, args.seq, args.hidden_size, args.num_layer, args.batch_first, args.model_type)
         if self.cuda:
             self.model = self.model.cuda()
 
@@ -42,11 +40,15 @@ class PPNetTrainer:
         loaders = [PPNetDataset(file_path, self.device) for file_path in files]
         len_loader = len(loaders)
         assert sum(self.split)==1, "Incorrect train, val, test split ratio"
-        splits = [math.ceil(self.split[0]*len_loader), math.ceil(self.split[1]*len_loader), math.ceil(self.split[2]*len_loader)]
+        splits = [math.floor(self.split[0]*len_loader), math.ceil(self.split[1]*len_loader), math.ceil(self.split[2]*len_loader)]
         train_dataset, val_dataset, test_dataset = loaders[:splits[0]], loaders[splits[0]: splits[0]+splits[1]], loaders[splits[0]+splits[1]:]
-        self.train_loader = ConcatDataset(train_dataset)
-        self.val_loader = ConcatDataset(val_dataset)
-        self.test_loader = ConcatDataset(test_dataset) 
+        self.train_dataset = ConcatDataset(train_dataset)
+        self.val_dataset = ConcatDataset(val_dataset)
+        self.test_dataset = ConcatDataset(test_dataset) 
+
+        self.train_loader = DataLoader(self.train_dataset, batch_size=self.batch_size, shuffle=False, num_workers=args.num_data_loader_workers)
+        self.val_loader = DataLoader(self.val_dataset, batch_size=self.val_batch_size, shuffle=False, num_workers=args.num_data_loader_workers)
+        self.test_loader = DataLoader(self.test_dataset, batch_size=self.val_batch_size, shuffle=False, num_workers=args.num_data_loader_workers)
         
         # optimizer, loss
         self.loss = MotionLoss(args.gamma, args.k)
@@ -83,10 +85,10 @@ class PPNetTrainer:
                 self.optimizer.step()
 
                 if current_step % self.log_freq == 0:
-                    print("Epoch: {}, Batch: {}/{}, Train Loss: {}".format(epoch, batch_id, num_batches, loss))
+                    print("Epoch: {}, Batch: {}/{}, Train Loss: {}".format(epoch, batch_idx, num_batches, loss))
                     self.writer.add_scalar('Train Loss (steps)', loss.item(), current_step)
 
-            train_loss =  torch.mean(loss_accum)   
+            train_loss =  np.mean(loss_accum)   
             print("Epoch: {}, Train Loss: {}".format(epoch, train_loss))
             self.writer.add_scalar('Train loss (epoch)', train_loss, epoch)    
 
@@ -125,7 +127,7 @@ class PPNetTrainer:
             val_loss_accum.append(loss.item())
             self.writer.add_scalar('Val Loss (steps)', loss.item(), current_step)
 
-        val_loss = torch.mean(val_loss_accum)
+        val_loss = np.mean(val_loss_accum)
         print("Epoch: {}, Val Loss: {}".format(epoch, val_loss))
         self.writer.add_scalar('Val Loss (epoch)', val_loss, epoch)
         return val_loss

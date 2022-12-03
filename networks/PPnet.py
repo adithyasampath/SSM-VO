@@ -26,7 +26,11 @@ class PPnet(nn.Module):
         self.fn_variance = nn.Linear(seq * hidden_size, output_size)
 
     def forward(self, x):
-        t_feature, (_, _) = self.model(x)
+        if "lstm" in self.type or "gru" in self.type:
+            t_feature, _ = self.model(x)
+        else:
+            # TODO: Sahiti
+            t_feature, _ = self.model(x)
 
         t_feature = t_feature.reshape(-1, self.hidden_size * self.seq)
 
