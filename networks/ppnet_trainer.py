@@ -30,7 +30,7 @@ class PPNetTrainer:
         if not os.path.isdir(self.save_dir):
             os.makedirs(self.save_dir)
         self.model_type = args.model_type
-        self.val_loss = 0
+        self.val_loss = float('inf')
 
         # model
         self.model = PPnet(args.input_size, args.output_size, args.seq, args.hidden_size, args.num_layer, args.batch_first, args.model_type)
@@ -119,13 +119,12 @@ class PPNetTrainer:
 
             if epoch % self.val_freq == 0:
                 self.val_loss = self.validate(epoch)
+                if self.val_loss < self.best_val_loss:
+                    self.best_val_loss = self.val_loss
+                    torch.save(self.model, os.path.join(self.save_dir, f'ppnet_{self.model_type}_best_model.pth'))
 
             if epoch % self.save_freq == 0:
                 torch.save(self.model, os.path.join(self.save_dir, f'ppnet_{self.model_type}_{epoch}.pth'))
-
-            if not self.val_loss or self.val_loss < self.best_val_loss:
-                self.best_val_loss = self.val_loss
-                torch.save(self.model, os.path.join(self.save_dir, f'ppnet_{self.model_type}_best_model.pth'))
 
         final_val_loss = self.validate(epoch)
         return final_val_loss

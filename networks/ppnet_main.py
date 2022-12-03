@@ -29,8 +29,3 @@ if __name__ == "__main__":
     trainer = PPNetTrainer(args)
     val_loss = trainer.train()
     print(f"Model validation loss after {args.epochs} epochs: {val_loss}")
-
-# [1] 15107 
-# [2] 15143 
-# [3] 15180 
-# [4] 15217 
