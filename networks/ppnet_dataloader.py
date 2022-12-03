@@ -32,18 +32,28 @@ class PPNetDataset(Dataset):
     def __len__(self):
         return self.data.shape[0] // 20
 
+    def convert_pose(self, rel_poses):
+        N = rel_poses.shape[0]
+        SEs = torch.zeros(N, 6).to(self.device)
+        for i in range(N):
+            r = rel_poses[i,:3,:3].reshape((1,3,3))
+            t = rel_poses[i,:3,3]
+            angle= matrix_to_axis_angle(r).reshape((-1))
+            SEs[i] = torch.hstack((angle , t))
+        return SEs
 
     def center_poses(self, input_poses):
         pputil = PPNetUtils(self.device)
-        N = input_poses.shape[0]
-        rel_poses = []
+        N = input_poses.shape[0] 
+        rel_poses = [] #b , n, 20
         for i in range(1,N):
             rel_pose = pputil.ses2SEs(input_poses[i].reshape((1,6))).inverse() @ pputil.ses2SEs(input_poses[i-1].reshape((1,6)))
             rel_poses.append(torch.squeeze(rel_pose))
 
         rel_poses = torch.stack(rel_poses)
-        centered_poses = pputil.translate_poses(rel_poses)
-        return centered_poses
+        rel_poses = self.convert_pose(rel_poses)
+        centered_poses = pputil.translate_poses(rel_poses.reshape((1,19,6)))
+        return torch.squeeze(centered_poses)
 
     def __getitem__(self, idx):
         input_poses = self.data[idx:idx+20]
@@ -51,5 +61,5 @@ class PPNetDataset(Dataset):
         scale_augment = np.random.choice(self.scale)
         input_poses[:,3:] = input_poses[:,3:]*scale_augment
         output_pose[3:] = output_pose[3:]*scale_augment
-        input_poses = self.center_poses(input_poses)
+        #input_poses = self.center_poses(input_poses)
         return input_poses.to(self.device), output_pose.to(self.device)
