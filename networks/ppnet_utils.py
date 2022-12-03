@@ -8,10 +8,10 @@ class PPNetUtils:
         self.device = device
         
     def se2SE(self, se_data):
-            SE = torch.eye(4).to(self.device)
-            SE[:3, :3] = axis_angle_to_matrix(se_data[3:])
-            SE[:3, 3] = se_data[:3]
-            return SE
+        SE = torch.eye(4).to(self.device)
+        SE[:3, :3] = axis_angle_to_matrix(se_data[3:])
+        SE[:3, 3] = se_data[:3]
+        return SE
 
     def ses2SEs(self, se_datas):
         N = se_datas.shape[0]

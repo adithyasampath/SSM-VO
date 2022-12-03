@@ -12,7 +12,7 @@ class PPNetDataset(Dataset):
     def __init__(self, poses_file="", device = 'cpu'):
         self.poses_file = poses_file
         self.data = self.read_file()
-        self.scale = torch.linspace(1, 1.5, steps=5)
+        self.scale = torch.linspace(0.8, 1.2, steps=10)
         self.device = device
     
     def read_file(self):
@@ -58,7 +58,8 @@ class PPNetDataset(Dataset):
     def __getitem__(self, idx):
         input_poses = self.data[idx:idx+20]
         output_pose = self.data[idx + 20]
-        scale_augment = np.random.choice(self.scale)
+        # scale_augment = np.random.choice(self.scale)
+        scale_augment = 1
         input_poses[:,3:] = input_poses[:,3:]*scale_augment
         output_pose[3:] = output_pose[3:]*scale_augment
         # input_poses = self.center_poses(input_poses)

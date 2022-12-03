@@ -8,7 +8,7 @@ if __name__ == "__main__":
     parser.add_argument('--val_batch_size', type=int, default=64)
     parser.add_argument('--save_freq', type=int, default=1)
     parser.add_argument('--val_freq', type=int, default=5)
-    parser.add_argument('--log_freq', type=int, default=512)
+    parser.add_argument('--log_freq', type=int, default=5)
     parser.add_argument('--save_dir', type=str, default="./ppnet_weights")
     parser.add_argument('--data_dir', type=str, default="../dataset/poses")
     parser.add_argument('--reduction', type=str, default="mean")
