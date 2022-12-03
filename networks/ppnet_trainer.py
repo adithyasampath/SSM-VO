@@ -7,9 +7,10 @@ from ppnet_dataloader import PPNetDataset
 import math
 from torch.utils.tensorboard import SummaryWriter
 from ppnet_loss import MotionLoss
+from PPnet import PPnet
 
 class PPNetTrainer:
-    def __init__(self, model, args):
+    def __init__(self, args):
         # data_dir="/home/aditya/SSM-VO/dataset/poses", split=[0.8,0.1,0.1], batch_size=32, epochs=20, num_worker=5, num_samples=100, exp_num=0
 
         # train args
@@ -31,14 +32,15 @@ class PPNetTrainer:
         self.val_loss = 0
 
         # model
-        self.model = model
+        # input_size=6, output_size=6, seq=20, hidden_size=8, num_layer=1, batch_first=True, model_type="lstm"
+        self.model = PPnet(args.input_size, args.output_size, args.hidden_size, args.num_layer, args.batch_first, args.model_type)
         if self.cuda:
             self.model = self.model.cuda()
 
         # data loaders
-        data_dir = args.data_dir
+        self.data_dir = args.data_dir
         self.split = args.split
-        files = [os.path.join(data_dir, "{:02d}.txt".format(idx)) for idx in range(1, 9)]
+        files = [os.path.join(self.data_dir, "{:02d}.txt".format(idx)) for idx in range(1, 9)]
         loaders = [PPNetDataset(file_path, self.device) for file_path in files]
         len_loader = len(loaders)
         assert sum(self.split)==1, "Incorrect train, val, test split ratio"
