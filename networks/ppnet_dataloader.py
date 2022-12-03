@@ -3,14 +3,14 @@ import os
 import numpy as np
 from PIL import Image
 from torch.utils.data import Dataset
-import torchvision
 from ..rotation_conversions import matrix_to_axis_angle
 
 class PPNetDataset(Dataset):
-    def __init__(self, poses_file=""):
+    def __init__(self, poses_file="", device = 'cpu'):
         self.poses_file = poses_file
         self.data = self.read_file(self.poses_file)
         self.scale = torch.arange(1, 5)
+        self.device = device
     
     def read_file(self):
         data = []
@@ -35,4 +35,4 @@ class PPNetDataset(Dataset):
         scale_augment = np.random.choice(self.scale)
         input_poses[:,3:] = input_poses[:,3:]*scale_augment
         output_pose[3:] = output_pose[3:]*scale_augment
-        return input_poses, output_pose
+        return input_poses.to(self.device), output_pose.to(self.device)
