@@ -6,6 +6,7 @@ from torch.utils.data import Dataset
 import sys
 sys.path.append("../")
 from rotation_conversions import matrix_to_axis_angle
+from ppnet_utils import PPNetUtils
 
 class PPNetDataset(Dataset):
     def __init__(self, poses_file="", device = 'cpu'):
@@ -31,10 +32,24 @@ class PPNetDataset(Dataset):
     def __len__(self):
         return self.data.shape[0] // 20
 
+
+    def center_poses(self, input_poses):
+        pputil = PPNetUtils(self.device)
+        N = input_poses.shape[0]
+        rel_poses = []
+        for i in range(1,N):
+            rel_pose = pputil.ses2SEs(input_poses[i].reshape((1,6))).inverse() @ pputil.ses2SEs(input_poses[i-1].reshape((1,6)))
+            rel_poses.append(torch.squeeze(rel_pose))
+
+        rel_poses = torch.stack(rel_poses)
+        centered_poses = pputil.translate_poses(rel_poses)
+        return centered_poses
+
     def __getitem__(self, idx):
         input_poses = self.data[idx:idx+20]
         output_pose = self.data[idx + 20]
         scale_augment = np.random.choice(self.scale)
         input_poses[:,3:] = input_poses[:,3:]*scale_augment
         output_pose[3:] = output_pose[3:]*scale_augment
+        input_poses = self.center_poses(input_poses)
         return input_poses.to(self.device), output_pose.to(self.device)
