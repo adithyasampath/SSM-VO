@@ -11,7 +11,9 @@ from datasets.kitti_dataset import KITTIOdomDataset
 from rotation_conversions import axis_angle_to_matrix, matrix_to_axis_angle
 from multilossmanager import MultiLossManager
 from posemanager import PoseManager
-from networks.PPnet import PPnet
+import sys
+sys.path.append('./networks')
+from PPnet import PPnet
 from operator import itemgetter
 from tqdm import tqdm
 
@@ -73,9 +75,9 @@ class Trainer:
         self.parameters_to_train += list(self.models["depth"].parameters())
 
         ## MotionHint: PPnet
-        self.models["ppnet"] = networks.PPnet().to(self.device)
+        self.models["ppnet"] = PPnet(model_type =self.opt.ppnet_model).to(self.device)
         if self.opt.ppnet:
-            self.models["ppnet"].load_state_dict(torch.load(self.opt.ppnet))
+            self.models["ppnet"] =torch.load(self.opt.ppnet)
         else:
             print("You must provide the path of PPnet.")
             sys.exit(1)

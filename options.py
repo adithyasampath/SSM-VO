@@ -30,6 +30,11 @@ class MonodepthOptions:
                                  help="the path of ppnet",
                                  default=None)
 
+        self.parser.add_argument("--ppnet_model",
+                                 type=str,
+                                 help="ppnet arch",
+                                 default=None)
+
         # MULTI_LOSS_REBALANCING
         self.parser.add_argument("--lambda_start",
                                  type=float,
