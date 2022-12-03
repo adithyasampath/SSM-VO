@@ -2,3 +2,4 @@ __pycache__
 ppnet_logs
 *.ipynb
 *.pth
+*.out

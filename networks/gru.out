@@ -3,4 +3,6 @@ Epoch: 0, Batch: 0/12, Train Loss: 44.367340087890625
 Epoch: 0, Batch: 5/12, Train Loss: 78.94506072998047
 Epoch: 0, Batch: 10/12, Train Loss: 75.87008666992188
 Epoch: 0, Train Loss: 71.49500385920207
-0it [00:00, ?it/s]
+0it [00:00, ?it/s]1it [00:03,  3.43s/it]1it [00:03,  3.43s/it]
+Epoch: 0, Val Loss: 11.602293014526367
+0it [00:00, ?it/s]1it [00:03,  3.99s/it]2it [00:07,  3.99s/it]3it [00:11,  3.99s/it]4it [00:15,  4.00s/it]5it [00:19,  4.00s/it]6it [00:23,  4.00s/it]7it [00:27,  4.00s/it]8it [00:31,  3.99s/it]
