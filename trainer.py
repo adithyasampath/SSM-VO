@@ -64,6 +64,8 @@ class Trainer:
         if self.opt.use_stereo:
             self.opt.frame_ids.append("s")
 
+        print("Defining Models")
+        
         self.models["encoder"] = networks.ResnetEncoder(
             self.opt.num_layers, self.opt.weights_init == "pretrained")
         self.models["encoder"].to(self.device)
@@ -73,17 +75,20 @@ class Trainer:
             self.models["encoder"].num_ch_enc, self.opt.scales)
         self.models["depth"].to(self.device)
         self.parameters_to_train += list(self.models["depth"].parameters())
-
+        print("Defined MonoDepth2 models")
+        
         ## MotionHint: PPnet
-        self.models["ppnet"] = PPnet(model_type =self.opt.ppnet_model).to(self.device)
+        self.models["ppnet"] = PPnet(model_type=self.opt.ppnet_model).to(self.device)
         if self.opt.ppnet:
             self.models["ppnet"] =torch.load(self.opt.ppnet)
         else:
             print("You must provide the path of PPnet.")
             sys.exit(1)
+        print("Defined PPNet model")
         # end
 
         if self.use_pose_net:
+            print("Using PoseNet")
             if self.opt.pose_model_type == "separate_resnet":
                 self.models["pose_encoder"] = networks.ResnetEncoder(
                     self.opt.num_layers,
@@ -110,6 +115,7 @@ class Trainer:
             self.parameters_to_train += list(self.models["pose"].parameters())
 
         if self.opt.predictive_mask:
+            print("Using Predictive Mask")
             assert self.opt.disable_automasking, \
                 "When using predictive_mask, please disable automasking with --disable_automasking"
 
@@ -121,6 +127,7 @@ class Trainer:
             self.models["predictive_mask"].to(self.device)
             self.parameters_to_train += list(self.models["predictive_mask"].parameters())
 
+        print("Defining model optimizer")
         self.model_optimizer = optim.Adam(self.parameters_to_train, self.opt.learning_rate)
         self.model_lr_scheduler = optim.lr_scheduler.StepLR(
             self.model_optimizer, self.opt.scheduler_step_size, 0.1)
@@ -131,6 +138,7 @@ class Trainer:
         val_filenames = readlines(fpath.format("val"))
 
         ## MotionHint: build Pose Manager
+        print("Defining Pose Manager")
         self.pseudo_poses_initialized = False
         self.pseudo_poses = {}
         for lines in train_filenames:
@@ -146,10 +154,13 @@ class Trainer:
             self.pseudo_poses[key] = PoseManager(torch.zeros(max_num, 2, 6).to(self.device))
             self.pseudo_poses[key][:, 1, 0] = float('inf')
         # end
-
+        print("Build Pose Manager")
+        
         if self.opt.load_weights_folder is not None:
             self.load_model()
-
+        print("ModoDepth2 Loaded!")
+        
+        
         ## MotionHint: convient to set learning rate
         for param_group in self.model_optimizer.param_groups:
             param_group["lr"] = self.opt.learning_rate
@@ -171,6 +182,7 @@ class Trainer:
         num_train_samples = len(train_filenames)
         self.num_total_steps = num_train_samples // self.opt.batch_size * self.opt.num_epochs
 
+        print("Defining Dataloader")
         train_dataset = self.dataset(
             self.opt.data_path, train_filenames, self.opt.height, self.opt.width,
             self.opt.frame_ids, 4, is_train=True, img_ext=img_ext)
@@ -184,6 +196,7 @@ class Trainer:
             val_dataset, self.opt.batch_size, True,
             num_workers=self.opt.num_workers, pin_memory=True, drop_last=True)
         self.val_iter = iter(self.val_loader)
+        print("Built Dataloader")
 
         ## MotionHint: Using 'Multi Loss Rebalancing' for weights initialization, just update once
         self.num_losses = 2
@@ -200,6 +213,8 @@ class Trainer:
 
         self.backproject_depth = {}
         self.project_3d = {}
+        
+        print("Defining Scales")
         for scale in self.opt.scales:
             h = self.opt.height // (2 ** scale)
             w = self.opt.width // (2 ** scale)
@@ -261,7 +276,7 @@ class Trainer:
         self.epoch = 0
         self.step = 0
         self.start_time = time.time()
-        for self.epoch in range(self.opt.num_epochs):
+        for self.epoch in tqdm(range(self.opt.num_epochs)):
             ## MotionHint: Param lambda of multi loss rebalancing
             self.current_lambda = max(self.opt.lambda_start + self.epoch * self.opt.lambda_slope, self.opt.lambda_end)
             # end
@@ -271,8 +286,7 @@ class Trainer:
     def run_epoch(self):
         """Run a single epoch of training and validation
         """
-        self.model_lr_scheduler.step()
-
+        
         print("Training")
         self.set_train()
 
@@ -280,7 +294,7 @@ class Trainer:
         origin_loss = 0
         motion_loss = 0
         sample_num = 0
-        for batch_idx, inputs in enumerate(self.train_loader):
+        for batch_idx, inputs in enumerate(tqdm(self.train_loader)):
 
             before_op_time = time.time()
 
@@ -311,7 +325,8 @@ class Trainer:
                 self.model_optimizer.zero_grad()
                 loss.backward()
             # end
-
+            self.model_lr_scheduler.step()
+            
             duration = time.time() - before_op_time
 
             # log less frequently after the first 2000 steps to save time & disk space

@@ -3,7 +3,7 @@ from torch import nn
 
 
 class PPnet(nn.Module):
-    def __init__(self, input_size=6, output_size=6, seq=20, hidden_size=8, num_layer=1, batch_first=True, nhead=6, model_type="lstm"):
+    def __init__(self, input_size=6, output_size=6, seq=20, hidden_size=12, num_layer=1, batch_first=True, nhead=6, model_type="lstm"):
         super().__init__()
 
         self.hidden_size = hidden_size

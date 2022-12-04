@@ -3,3 +3,7 @@ ppnet_logs
 *.ipynb
 *.pth
 *.out
+train_logs*
+weights
+Pretrained_MonoDepth2
+dataset
