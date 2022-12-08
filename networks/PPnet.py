@@ -19,7 +19,7 @@ class PPnet(nn.Module):
         elif self.type == "slstm":
             self.model = nn.LSTM(input_size=input_size, hidden_size=hidden_size, num_layers=num_layer+1, batch_first=batch_first)
         elif self.type == "transformer":
-            encoder_layer = nn.TransformerEncoderLayer(d_model=hidden_size, nhead=nhead)
+            encoder_layer = nn.TransformerEncoderLayer(d_model=input_size, nhead=nhead, dim_feedforward=hidden_size)
             self.model = nn.TransformerEncoder(encoder_layer, num_layers=num_layer)
         elif self.type == "stransformer":
             encoder_layer = nn.TransformerEncoderLayer(d_model=hidden_size, nhead=nhead)

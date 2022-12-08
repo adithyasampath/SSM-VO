@@ -25,7 +25,7 @@ class PPNetTrainer:
         self.cuda = torch.cuda.is_available()
         self.device = torch.device("cuda") if self.cuda else torch.device("cpu")
         self.best_val_loss = float('inf')
-        self.writer = SummaryWriter('./ppnet_logs')
+        self.writer = SummaryWriter('./ppnet_logs_'+args.model_type)
         self.save_dir = args.save_dir
         self.save_path = os.path.join(self.save_dir, args.model_type)
         if not os.path.isdir(self.save_path):
@@ -54,7 +54,7 @@ class PPNetTrainer:
         self.val_dataset = ConcatDataset(val_dataset)
         self.test_dataset = ConcatDataset(test_dataset) 
 
-        self.train_loader = DataLoader(self.train_dataset, batch_size=self.batch_size, shuffle=False, num_workers=args.num_data_loader_workers)
+        self.train_loader = DataLoader(self.train_dataset, batch_size=self.batch_size, shuffle=True, num_workers=args.num_data_loader_workers)
         self.val_loader = DataLoader(self.val_dataset, batch_size=self.val_batch_size, shuffle=False, num_workers=args.num_data_loader_workers)
         self.test_loader = DataLoader(self.test_dataset, batch_size=self.val_batch_size, shuffle=False, num_workers=args.num_data_loader_workers)
         
