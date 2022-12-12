@@ -1,3 +1,19 @@
+# 16-833 Final Project
+## Adithya Sampath, Sahiti Yerramilli, Aditya Ghuge
+
+We take inspiration from MotionHint paper for defining a Motion model for SSM-VO models like MonoDepth2 to avoid the local minima probelm in teir consistency loss.
+
+1.  PPNet Motion model, as seen `networks/PPNet` is defined as sequence models like LSTM, Stacked LSTM, GRU, Stacked GRU, and Transformer.
+
+2. define the dataloader in `networks\ppnet_dataloader`, with pose centralisation and scale augmentation.
+
+3. itionally, we also define the loss function for the PPNet model as a modified negative log likelihood loss in `network\ppnet_loss`.
+
+4. We define the training and validation helper functions in `networks\ppnet_trainer`.
+
+5. Finally, to train the PPNet model, we run `networks\ppnet_main`. Once we have a trained PPNet Motion model, we use it to train the end-to-end network with MonoDepth2 SSM-VO using the steps described in the original repository below.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
 # MotionHint: Self-Supervised Monocular Visual Odometry with Motion Constraints
 
 This is the official PyTorch implementation of "MotionHint: Self-Supervised Monocular Visual Odometry with Motion Constraints".
