@@ -139,14 +139,3 @@ We directly employ [the KITTI Odometry Evaluation Toolbox](https://github.com/Hu
 ./scripts/eval_model.sh YOUR_MODEL_PATH EVALUATION_NAME
 ```
 The evaluation results will be shown in the terminal, and saved in ```./evaluations/result/EVALUATION_NAME```.
-
-## Results and Pre-trained Models
-
-| Model name        | Seq 09 translation error(%) | Seq 09 rotation error(°/100m) | Seq 09 ATE(m) | Seq 10 translation error(%) | Seq 10 rotation error(°/100m) | Seq 10 ATE(m) | 
-|------------------------|-------------------|--------------------------|-----------------|------|----------------|----|
-| [`MonoDepth2`](https://drive.google.com/drive/folders/1TwdYB8B3sB9NyWR9Q4eNVtOnQ1B4Fxu9?usp=sharing)| 15.079 | 3.335 | 69.019 | 12.102 | 4.927 | 19.371 |
-| [`MotionHint(Ground Truth)`](https://drive.google.com/drive/folders/1ubB-6U65VpAS3dAEUxgbdY1HFb3okvf7?usp=sharing) | 13.502 | 2.998 | 62.337 | 10.377 | 4.453 | 17.541 |
-| [`MotionHint(Paired Pose)`](https://drive.google.com/drive/folders/15l1uqj_ooVYpoeh7p7NdCz92-ZdfijgC?usp=sharing) | 14.071 | 3.099 | 64.704 | 10.976 | 4.495 | 17.752 |
-| [`MotionHint(Unpaired Pose)`](https://drive.google.com/drive/folders/19j6cJCxF9lIp-lFO3c0sk9IQwuxlGrZM?usp=sharing) | **9.761** | **2.226** | **46.036** | **8.679** | **3.334** | **13.282** |
-
-All models above are trained for 20 epochs, and then **the lastest version** is taken as the final model.
